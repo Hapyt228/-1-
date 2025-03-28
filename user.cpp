@@ -12,8 +12,8 @@ void Usermenu() {
         cout << "                                            Выберите что хотите сделать" << endl;
         cout << "                                                 1 - Создание сборки" << endl;
         cout << "                                                 2 - Просмотр сборки" << endl;
-        cout << "                                                 4 - Просмотр сборки" << endl;
-        cout << "                                                 3 - Выход" << endl;
+        cout << "                                                 3 - Удаление сборки" << endl;
+        cout << "                                                 4 - Выход" << endl;
 
         int choice;
         cin >> choice;
@@ -27,11 +27,11 @@ void Usermenu() {
             View();
             break;
         case 3:
-            cout << "Спасибо за использование приложения!" << endl;
-            start = false;
+            Deletespork();
             break;
         case 4:
-            Deletespork();
+            cout << "Спасибо за использование приложения!" << endl;
+            start = false;
             break;
         default:
             cout << "Ошибка: выберите вариант от 1 до 3." << endl;

@@ -1,30 +1,10 @@
-kek
-AMD Ryzen 9 9900X — $499
-Nvidia GeForce RTX 4060 Ti (8 ΓΑ) — $400
-ASRock B650M PRO RS — $189
-Crucial DDR5-5600 (2x16GB, CL46) — $300
-Deepcool LS720 (360 μμ, AIO) — $140
-Kingston Fury Renegade 1TB (M.2 NVMe, PCIe 4.0) — $130
-be quiet! Straight Power 11 850W (80+ Platinum) — $180
-be quiet! Pure Base 500DX — $120
-----------
-ι 
-Intel Core i9-12900K — $589
-Nvidia GeForce RTX 5090 — $1,999
-ASUS ROG MAXIMUS Z690 HERO — $599
-G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) — $200
-Corsair iCUE H150i ELITE LCD XT (360 μμ, AIO) — $290
-Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) — $100
-Corsair RM850x 850W (80+ Gold) — $130
-NZXT H510 Elite — $150
-----------
 hapyt
-Intel Core i9-12900K — $589
-Nvidia GeForce RTX 5090 — $1,999
-ASUS ROG MAXIMUS Z690 HERO — $599
-G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) — $200
-Corsair iCUE H150i ELITE LCD XT (360 μμ, AIO) — $290
-Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) — $100
-Corsair RM850x 850W (80+ Gold) — $130
-NZXT H510 Elite — $150
+AMD Ryzen 9 9950X — $649
+Nvidia GeForce RTX 5070 Ti — $749
+MSI MAG B550 TOMAHAWK — $179
+G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32) — $400
+ARCTIC Liquid Freezer II 360 (360 μμ, AIO) — $150
+Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0) — $90
+Seasonic Focus GX-850 850W (80+ Gold) — $140
+Fractal Design Meshify C — $100
 ----------
