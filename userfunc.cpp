@@ -17,6 +17,7 @@ void saveSelection(const string& selection, bool newcreating = false) {
         return;
     }
 
+
     file << selection << endl;
     
 }
@@ -34,7 +35,7 @@ void readEnter(int counter, int& StartPos) {
     while (getline(inFile, line)) {
         if (counter >= StartPos)
         {
-            if (line == "") {
+            if (line == "----------") {
                 StartPos = counter + 1;
                 break;
             }
@@ -165,22 +166,30 @@ void View() {
 
 void Deletespork() {
     ifstream inFile(selectedFilename);
-    ofstream file(selectedFilename, ios::app);
+    ofstream tempFile("temp.txt");
     string line;
+    int counter = 0;
     bool sup = false;
     while (getline(inFile, line)) {
         if (sup) {
-            size_t pos = line.find('$');
-            line = "";
-            file << line;
             if (line == "----------") {
                 sup = false;
+                counter++;
             }
         }
-        if (line == getCurrentUser()) {
+        else if (counter == 0) {
+            if (line == getCurrentUser()) {
             sup = true;
+            }
+        }
+        else{
+            tempFile << line << endl;
         }
     }
 
     inFile.close();
+    tempFile.close();
+
+    remove(selectedFilename.c_str());
+    rename("temp.txt", selectedFilename.c_str());
 }

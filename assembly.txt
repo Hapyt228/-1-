@@ -8,7 +8,7 @@ AMD Ryzen 5 9600X — $279
 Intel Core i5-12600K — $289
 AMD Ryzen 5 7600X — $249
 AMD Ryzen 5 5600X — $199
-
+----------
 Nvidia GeForce RTX 5090 — $1,999
 Nvidia GeForce RTX 5080 — $999 
 Nvidia GeForce RTX 5070 Ti — $749
@@ -19,7 +19,7 @@ AMD Radeon RX 9070 — $549
 AMD Radeon RX 7600 XT — $300
 Intel Arc B580 — $275
 Intel Arc A750 (8 ΓΑ) — $250
-
+----------
 ASUS ROG MAXIMUS Z690 HERO — $599
 MSI MEG Z790 ACE — $699
 MSI MAG B550 TOMAHAWK — $179
@@ -30,7 +30,7 @@ ASRock Z790 Taichi — $499
 GIGABYTE Z690 AORUS MASTER — $469
 GIGABYTE B650 AORUS ELITE AX — $229
 ASUS ROG CROSSHAIR X670E HERO — $699
-
+----------
 G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) — $200
 Corsair Vengeance DDR5-5600 (2x8GB, CL36) — $150
 G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32) — $400
@@ -41,7 +41,7 @@ Patriot Viper Steel DDR4-3600 (2x8GB, CL18) — $90
 Corsair Vengeance RGB Pro DDR4-3600 (2x16GB, CL18) — $180
 Crucial Ballistix DDR4-3600 (2x16GB, CL16) — $170
 G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18) — $220
-
+----------
 Corsair iCUE H150i ELITE LCD XT (360 μμ, AIO) — $290
 NZXT Kraken Z73 RGB (360 μμ, AIO) — $290
 ARCTIC Liquid Freezer II 360 (360 μμ, AIO) — $150
@@ -52,7 +52,7 @@ be quiet! Dark Rock Pro 4 — $100
 Deepcool Assassin III — $90
 Thermalright Peerless Assassin 120 SE — $50
 Cooler Master Hyper 212 Black Edition — $45
-
+----------
 Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) — $100
 Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0) — $110
 Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0) — $90
@@ -63,7 +63,7 @@ Seagate FireCuda 530 1TB (M.2 NVMe, PCIe 4.0) — $140
 SanDisk Extreme Pro 1TB (M.2 NVMe, PCIe 3.0) — $100
 ADATA XPG Gammix S70 1TB (M.2 NVMe, PCIe 4.0) — $95
 Crucial MX500 1TB (SATA SSD) — $60
-
+----------
 Corsair RM850x 850W (80+ Gold) — $130
 EVGA SuperNOVA 850 G5 850W (80+ Gold) — $160
 Seasonic Focus GX-850 850W (80+ Gold) — $140
@@ -74,7 +74,7 @@ Thermaltake Toughpower GF1 850W (80+ Gold) — $135
 ASUS ROG Strix 850G 850W (80+ Gold) — $150
 MSI MPG A850G 850W (80+ Gold) — $130
 Gigabyte P850GM 850W (80+ Gold) — $110
-
+----------
 NZXT H510 Elite — $150
 Corsair 4000D Airflow — $90
 Fractal Design Meshify C — $100

@@ -1,33 +1,3 @@
-hapyt
-Intel Core i9-12900K ó $589
-Nvidia GeForce RTX 5090 ó $1,999
-ASUS ROG MAXIMUS Z690 HERO ó $599
-G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) ó $200
-Corsair iCUE H150i ELITE LCD XT (360 ÏÏ, AIO) ó $290
-Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) ó $100
-Corsair RM850x 850W (80+ Gold) ó $130
-NZXT H510 Elite ó $150
-----------
-da
-Intel Core i7-12700K ó $409
-Nvidia GeForce RTX 5080 ó $999 
-MSI MEG Z790 ACE ó $699
-Corsair Vengeance DDR5-5600 (2x8GB, CL36) ó $150
-NZXT Kraken Z73 RGB (360 ÏÏ, AIO) ó $290
-Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0) ó $110
-EVGA SuperNOVA 850 G5 850W (80+ Gold) ó $160
-Corsair 4000D Airflow ó $90
-----------
-hapyt
-AMD Ryzen 5 5600X ó $199
-Intel Arc A750 (8 √¡) ó $250
-ASUS ROG CROSSHAIR X670E HERO ó $699
-G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18) ó $220
-Cooler Master Hyper 212 Black Edition ó $45
-Crucial MX500 1TB (SATA SSD) ó $60
-Gigabyte P850GM 850W (80+ Gold) ó $110
-Fractal Design Define 7 ó $170
-----------
 kek
 AMD Ryzen 9 9900X ó $499
 Nvidia GeForce RTX 4060 Ti (8 √¡) ó $400
@@ -39,6 +9,16 @@ be quiet! Straight Power 11 850W (80+ Platinum) ó $180
 be quiet! Pure Base 500DX ó $120
 ----------
 È†
+Intel Core i9-12900K ó $589
+Nvidia GeForce RTX 5090 ó $1,999
+ASUS ROG MAXIMUS Z690 HERO ó $599
+G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) ó $200
+Corsair iCUE H150i ELITE LCD XT (360 ÏÏ, AIO) ó $290
+Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) ó $100
+Corsair RM850x 850W (80+ Gold) ó $130
+NZXT H510 Elite ó $150
+----------
+hapyt
 Intel Core i9-12900K ó $589
 Nvidia GeForce RTX 5090 ó $1,999
 ASUS ROG MAXIMUS Z690 HERO ó $599
