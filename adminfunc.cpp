@@ -60,5 +60,23 @@ void AdminView() {
 }
 
 void Delete() {
-  
+    ifstream inFile(selectedFilename);
+    ofstream tempFile("temp.txt");
+    string line;
+    string removal;
+    cin >> removal;
+    while (getline(inFile, line)) {
+        if (removal == line) {
+            continue;
+        }
+        else {
+            tempFile << line << endl;
+        }
+    }
+
+    inFile.close();
+    tempFile.close();
+
+    remove(selectedFilename.c_str());
+    rename("temp.txt", selectedFilename.c_str());
 }

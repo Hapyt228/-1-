@@ -1,2 +1,7 @@
-﻿  userfunc.cpp
+﻿  admin.cpp
+  user.cpp
+  userfunc.cpp
+  Курсач.cpp
+C:\Users\user\source\repos\Курсач\Курсач\Курсач.cpp(24,28): warning C4305: =: усечение из "bool (__cdecl *)(void)" в "bool"
+  Создание кода...
   Курсач.vcxproj -> C:\Users\user\source\repos\Курсач\x64\Debug\Курсач.exe

@@ -18,6 +18,13 @@ struct User {
 
 extern User* currentUser;
 
+//struct Selection {
+//    string text;
+//    int index;
+//};
+
+//extern Selection* currentSelection;
+
 void loadUsers();
 void saveUsers();
 void registerUser();

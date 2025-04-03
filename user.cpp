@@ -1,7 +1,5 @@
 #include "Курсач.h"
 
-using namespace std;
-
 void Usermenu() {
     bool start = true;
 

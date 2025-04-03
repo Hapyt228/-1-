@@ -1,87 +1,87 @@
-Intel Core i9-12900K — $589
-Intel Core i7-12700K — $409
-AMD Ryzen 9 9950X — $649
-AMD Ryzen 9 9900X — $499
-AMD Ryzen 7 9800X3D — $479
-AMD Ryzen 7 9700X — $359
-AMD Ryzen 5 9600X — $279
-Intel Core i5-12600K — $289
-AMD Ryzen 5 7600X — $249
-AMD Ryzen 5 5600X — $199
+Intel Core i9-12900K — $589 #1
+Intel Core i7-12700K — $409 #1
+AMD Ryzen 9 9950X — $649 #2
+AMD Ryzen 9 9900X — $499 #2
+AMD Ryzen 7 9800X3D — $479 #2
+AMD Ryzen 7 9700X — $359 #2
+AMD Ryzen 5 9600X — $279 #2
+Intel Core i5-12600K — $289 #1
+AMD Ryzen 5 7600X — $249 #2
+AMD Ryzen 5 5600X — $199 #3
 ----------
-Nvidia GeForce RTX 5090 — $1,999
-Nvidia GeForce RTX 5080 — $999 
-Nvidia GeForce RTX 5070 Ti — $749
-Nvidia GeForce RTX 5070 — $549
-Nvidia GeForce RTX 4060 Ti (8 ΓΑ) — $400
-AMD Radeon RX 9070 XT — $599
-AMD Radeon RX 9070 — $549
-AMD Radeon RX 7600 XT — $300
-Intel Arc B580 — $275
-Intel Arc A750 (8 ΓΑ) — $250
+Nvidia GeForce RTX 5090 — $1,999 #1
+Nvidia GeForce RTX 5080 — $999 #1
+Nvidia GeForce RTX 5070 Ti — $749 #1
+Nvidia GeForce RTX 5070 — $549 #1
+Nvidia GeForce RTX 4060 Ti (8 ΓΑ) — $400 #1
+AMD Radeon RX 9070 XT — $599 #2
+AMD Radeon RX 9070 — $549 #2
+AMD Radeon RX 7600 XT — $300 #2
+Intel Arc B580 — $275 #3
+Intel Arc A750 (8 ΓΑ) — $250 #3
 ----------
-ASUS ROG MAXIMUS Z690 HERO — $599
-MSI MEG Z790 ACE — $699
-MSI MAG B550 TOMAHAWK — $179
-ASRock B650M PRO RS — $189
-MSI MEG X670E GODLIKE — $1,299
-MSI MPG Z690 EDGE WIFI — $349
-ASRock Z790 Taichi — $499
-GIGABYTE Z690 AORUS MASTER — $469
-GIGABYTE B650 AORUS ELITE AX — $229
-ASUS ROG CROSSHAIR X670E HERO — $699
+ASUS ROG MAXIMUS Z690 HERO — $599 #1
+MSI MEG Z790 ACE — $699 #1
+MSI MAG B550 TOMAHAWK — $179 #3
+ASRock B650M PRO RS — $189 #2
+MSI MEG X670E GODLIKE — $1,299 #2
+MSI MPG Z690 EDGE WIFI — $349 #1
+ASRock Z790 Taichi — $499 #1
+GIGABYTE Z690 AORUS MASTER — $469 #1
+GIGABYTE B650 AORUS ELITE AX — $229 #2
+ASUS ROG CROSSHAIR X670E HERO — $699 #2
 ----------
-G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) — $200
-Corsair Vengeance DDR5-5600 (2x8GB, CL36) — $150
-G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32) — $400
-Kingston Fury Renegade DDR5-6000 (2x16GB, CL32) — $350
-Crucial DDR5-5600 (2x16GB, CL46) — $300
-G.SKILL Ripjaws V DDR4-3200 (2x8GB, CL16) — $80
-Patriot Viper Steel DDR4-3600 (2x8GB, CL18) — $90
-Corsair Vengeance RGB Pro DDR4-3600 (2x16GB, CL18) — $180
-Crucial Ballistix DDR4-3600 (2x16GB, CL16) — $170
-G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18) — $220
+G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30) — $200 #1
+Corsair Vengeance DDR5-5600 (2x8GB, CL36) — $150 #1
+G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32) — $400 #1
+Kingston Fury Renegade DDR5-6000 (2x16GB, CL32) — $350 #1
+Crucial DDR5-5600 (2x16GB, CL46) — $300 #1
+G.SKILL Ripjaws V DDR4-3200 (2x8GB, CL16) — $80 #3
+Patriot Viper Steel DDR4-3600 (2x8GB, CL18) — $90 #3
+Corsair Vengeance RGB Pro DDR4-3600 (2x16GB, CL18) — $180 #3
+Crucial Ballistix DDR4-3600 (2x16GB, CL16) — $170 #3
+G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18) — $220 #3
 ----------
-Corsair iCUE H150i ELITE LCD XT (360 μμ, AIO) — $290
-NZXT Kraken Z73 RGB (360 μμ, AIO) — $290
-ARCTIC Liquid Freezer II 360 (360 μμ, AIO) — $150
-EKWB EK-AIO 360 D-RGB (360 μμ, AIO) — $180
-Deepcool LS720 (360 μμ, AIO) — $140
-Noctua NH-D15 chromax.black — $120
-be quiet! Dark Rock Pro 4 — $100
-Deepcool Assassin III — $90
-Thermalright Peerless Assassin 120 SE — $50
-Cooler Master Hyper 212 Black Edition — $45
+Corsair iCUE H150i ELITE LCD XT (360 μμ, AIO) — $290 #4
+NZXT Kraken Z73 RGB (360 μμ, AIO) — $290 #4
+ARCTIC Liquid Freezer II 360 (360 μμ, AIO) — $150 #4
+EKWB EK-AIO 360 D-RGB (360 μμ, AIO) — $180 #4
+Deepcool LS720 (360 μμ, AIO) — $140 #4
+Noctua NH-D15 chromax.black — $120 #4
+be quiet! Dark Rock Pro 4 — $100 #4
+Deepcool Assassin III — $90 #4
+Thermalright Peerless Assassin 120 SE — $50 #4
+Cooler Master Hyper 212 Black Edition — $45 #4
 ----------
-Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) — $100
-Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0) — $110
-Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0) — $90
-Kingston Fury Renegade 1TB (M.2 NVMe, PCIe 4.0) — $130
-Corsair MP600 1TB (M.2 NVMe, PCIe 4.0) — $110
-Samsung 970 Evo 1TB (M.2 NVMe, PCIe 3.0) — $80
-Seagate FireCuda 530 1TB (M.2 NVMe, PCIe 4.0) — $140
-SanDisk Extreme Pro 1TB (M.2 NVMe, PCIe 3.0) — $100
-ADATA XPG Gammix S70 1TB (M.2 NVMe, PCIe 4.0) — $95
-Crucial MX500 1TB (SATA SSD) — $60
+Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0) — $100 #4
+Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0) — $110 #4
+Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0) — $90 #4
+Kingston Fury Renegade 1TB (M.2 NVMe, PCIe 4.0) — $130 #4
+Corsair MP600 1TB (M.2 NVMe, PCIe 4.0) — $110 #4
+Samsung 970 Evo 1TB (M.2 NVMe, PCIe 3.0) — $80 #4
+Seagate FireCuda 530 1TB (M.2 NVMe, PCIe 4.0) — $140 #4
+SanDisk Extreme Pro 1TB (M.2 NVMe, PCIe 3.0) — $100 #4
+ADATA XPG Gammix S70 1TB (M.2 NVMe, PCIe 4.0) — $95 #4
+Crucial MX500 1TB (SATA SSD) — $60 #4
 ----------
-Corsair RM850x 850W (80+ Gold) — $130
-EVGA SuperNOVA 850 G5 850W (80+ Gold) — $160
-Seasonic Focus GX-850 850W (80+ Gold) — $140
-Cooler Master MWE Gold 850W (80+ Gold) — $120
-be quiet! Straight Power 11 850W (80+ Platinum) — $180
-NZXT C850 850W (80+ Gold) — $120
-Thermaltake Toughpower GF1 850W (80+ Gold) — $135
-ASUS ROG Strix 850G 850W (80+ Gold) — $150
-MSI MPG A850G 850W (80+ Gold) — $130
-Gigabyte P850GM 850W (80+ Gold) — $110
+Corsair RM850x 850W (80+ Gold) — $130 #4
+EVGA SuperNOVA 850 G5 850W (80+ Gold) — $160 #4
+Seasonic Focus GX-850 850W (80+ Gold) — $140 #4
+Cooler Master MWE Gold 850W (80+ Gold) — $120 #4
+be quiet! Straight Power 11 850W (80+ Platinum) — $180 #4
+NZXT C850 850W (80+ Gold) — $120 #4
+Thermaltake Toughpower GF1 850W (80+ Gold) — $135 #4
+ASUS ROG Strix 850G 850W (80+ Gold) — $150 #4
+MSI MPG A850G 850W (80+ Gold) — $130 #4
+Gigabyte P850GM 850W (80+ Gold) — $110 #4
 ----------
-NZXT H510 Elite — $150
-Corsair 4000D Airflow — $90
-Fractal Design Meshify C — $100
-be quiet! Pure Base 500DX — $120
-Cooler Master MasterBox Q300L — $60
-Lian Li PC-O11 Dynamic — $130
-Phanteks Eclipse P400A — $90
-Corsair iCUE 4000X RGB — $110
-Thermaltake View 71 RGB — $150
-Fractal Design Define 7 — $170
+NZXT H510 Elite — $150 #4
+Corsair 4000D Airflow — $90 #4
+Fractal Design Meshify C — $100 #4
+be quiet! Pure Base 500DX — $120 #4
+Cooler Master MasterBox Q300L — $60 #4
+Lian Li PC-O11 Dynamic — $130 #4
+Phanteks Eclipse P400A — $90 #4
+Corsair iCUE 4000X RGB — $110 #4
+Thermaltake View 71 RGB — $150 #4
+Fractal Design Define 7 — $170 #4

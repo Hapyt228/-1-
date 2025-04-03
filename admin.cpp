@@ -1,6 +1,5 @@
 #include "Курсач.h"
 
-using namespace std;
 
 void Adminmenu() {
     bool start = true;

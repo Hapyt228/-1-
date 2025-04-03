@@ -1,7 +1,5 @@
 #include "Курсач.h"
 
-using namespace std;
-
 const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";
 
@@ -32,22 +30,22 @@ void readEnter(int counter, int& StartPos) {
     string line;
     int count = 0;
     int choice;
-    while (getline(inFile, line)) {
-        if (counter >= StartPos)
-        {
-            if (line == "----------") {
-                StartPos = counter + 1;
-                break;
-            }
-            lines[count] = line;
-            count++;
-            cout << count << ") " << line << endl;
-            counter++;
-        }
-        else {
-            counter++;
-        }
-    }
+      while (getline(inFile, line)) {
+                if (counter >= StartPos)
+                {
+                    if (line == "----------") {
+                        StartPos = counter + 1;
+                        break;
+                    }
+                    lines[count] = line;
+                    count++;
+                    cout << count << ") " << line << endl;
+                    counter++;
+                }
+                else {
+                    counter++;
+                }
+      }      
     cout << "Выберите номер комплектующего: ";
     cin >> choice;
 

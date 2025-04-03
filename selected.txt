@@ -1,10 +1,12 @@
 hapyt
-AMD Ryzen 9 9950X — $649
-Nvidia GeForce RTX 5070 Ti — $749
-MSI MAG B550 TOMAHAWK — $179
-G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32) — $400
-ARCTIC Liquid Freezer II 360 (360 μμ, AIO) — $150
-Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0) — $90
-Seasonic Focus GX-850 850W (80+ Gold) — $140
-Fractal Design Meshify C — $100
+hapyt
+hapyt
+Intel Core i7-12700K — $409 #1
+Nvidia GeForce RTX 5080 — $999 #1
+MSI MEG Z790 ACE — $699 #1
+Corsair Vengeance DDR5-5600 (2x8GB, CL36) — $150 #1
+NZXT Kraken Z73 RGB (360 μμ, AIO) — $290 #4
+Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0) — $110 #4
+EVGA SuperNOVA 850 G5 850W (80+ Gold) — $160 #4
+Corsair 4000D Airflow — $90 #4
 ----------

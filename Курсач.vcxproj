@@ -130,6 +130,7 @@
     <ClCompile Include="admin.cpp" />
     <ClCompile Include="adminfunc.cpp" />
     <ClCompile Include="auth.cpp" />
+    <ClCompile Include="sorting.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="userfunc.cpp" />
     <ClCompile Include="Курсач.cpp" />
