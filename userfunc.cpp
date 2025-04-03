@@ -1,4 +1,4 @@
-#include "Курсач.h"
+#include "auth.h"
 
 const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";

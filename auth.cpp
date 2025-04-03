@@ -1,4 +1,4 @@
-#include "Курсач.h"
+#include "auth.h"
 
 const User ADMIN = { "admin", "admin123", true };
 User users[MAX_USERS]; 

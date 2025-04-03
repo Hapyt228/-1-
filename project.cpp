@@ -1,5 +1,6 @@
-#include "Курсач.h"
-
+#include "auth.h"
+#include "user.h"
+#include "admin.h"
 
 int main() {
     setlocale(LC_ALL, "Russian");

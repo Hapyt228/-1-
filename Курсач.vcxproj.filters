@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Курсач.cpp">
+    <ClCompile Include="project.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
     <ClCompile Include="auth.cpp">
@@ -38,7 +38,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Курсач.h">
+    <ClInclude Include="auth.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="userfunc.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="user.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="adminfunc.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="admin.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

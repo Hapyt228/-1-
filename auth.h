@@ -18,25 +18,12 @@ struct User {
 
 extern User* currentUser;
 
-//struct Selection {
-//    string text;
-//    int index;
-//};
-
-//extern Selection* currentSelection;
 
 void loadUsers();
 void saveUsers();
 void registerUser();
 void loginUser();
-void Creating();
-void View();
-void Usermenu();
-void AdminView();
 string getCurrentUser();
-void Delete();
-void Adminmenu();
 bool checkIfAdmin();
-void Deletespork();
 
 #endif

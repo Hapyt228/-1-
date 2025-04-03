@@ -133,10 +133,14 @@
     <ClCompile Include="sorting.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="userfunc.cpp" />
-    <ClCompile Include="Курсач.cpp" />
+    <ClCompile Include="project.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Курсач.h" />
+    <ClInclude Include="admin.h" />
+    <ClInclude Include="adminfunc.h" />
+    <ClInclude Include="user.h" />
+    <ClInclude Include="userfunc.h" />
+    <ClInclude Include="auth.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

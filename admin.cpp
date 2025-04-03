@@ -1,5 +1,4 @@
-#include "Курсач.h"
-
+#include "adminfunc.h"
 
 void Adminmenu() {
     bool start = true;
