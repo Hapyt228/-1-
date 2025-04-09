@@ -6,7 +6,6 @@
 #include <string>
 
 using namespace std;
-
 const string USERS_FILE = "user.txt";
 const int MAX_USERS = 100;
 

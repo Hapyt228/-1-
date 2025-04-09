@@ -1,7 +1,10 @@
 #include "auth.h"
+#include "structure.h"
+#include "sorting.h"
 
 const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";
+bool sortByPrice = false;
 
 void saveSelection(const string& selection, bool newcreating = false) {
     ofstream file(selectedFilename, ios::app);
@@ -17,112 +20,109 @@ void saveSelection(const string& selection, bool newcreating = false) {
 
 
     file << selection << endl;
-    
+
 }
 
 
-void readEnter(int counter, int& StartPos) {
-    ifstream inFile(filename);
-    if (!inFile) {
-        cout << "Ошибка: не удалось открыть файл " << filename << endl;
+void displayAndSelectProduct(int categoryIndex, bool& fork) {
+    if (categoryIndex < 0 || categoryIndex >= 8) {
+        cout << "Неверный индекс категории.\n";
+        return;
     }
-    string lines[10000];
-    string line;
-    int count = 0;
+
+    int matchingIndices[MAX_PRODUCTS];
+    int indexCounter = 0;
+    for (int i = 0; i < productCount; ++i) {
+        if (products[i].category == categoryNames[categoryIndex]) {
+            matchingIndices[indexCounter++] = i;
+        }
+    }
+
+
+    if (!fork && !sortByPrice) {
+        cout << "Список " << categoryNames[categoryIndex] << ":\n";
+        for (int i = 0; i < indexCounter; ++i) {
+            int index = matchingIndices[i];
+            cout << i + 1 << ") " << products[index].name
+                << " — $" << products[index].price << "\n";
+        }
+    }
+    else if(fork){
+        SortOutput();
+    }
+    else {
+        SortPrice(categoryIndex, sortByPrice);
+        SortOutputPrice();
+    }
+
+    cout << "\nВведите номер для выбора: ";
     int choice;
-      while (getline(inFile, line)) {
-                if (counter >= StartPos)
-                {
-                    if (line == "----------") {
-                        StartPos = counter + 1;
-                        break;
-                    }
-                    lines[count] = line;
-                    count++;
-                    cout << count << ") " << line << endl;
-                    counter++;
-                }
-                else {
-                    counter++;
-                }
-      }      
-    cout << "Выберите номер комплектующего: ";
     cin >> choice;
 
-    while (choice < 1 || choice > count) {
-        cout << "Ошибка: некорректный выбор!\n";
-        cout << "Выберите комплектующие снова: ";
-        cin >> choice;
+    int maxChoice = fork ? queueMy.size() : indexCounter;
+    if (choice < 1 || choice > maxChoice) {
+        cout << "Неверный номер. Попробуйте снова.\n";
+        return;
     }
 
-    string selected = lines[choice - 1];
+    Product selectedProduct;
 
-    cout << "Вы выбрали: " << selected << endl;
-    cout << endl;
-    saveSelection(selected);
+    if (fork) {
+        queue <Product> tempQueue = queueMy;
+        for (int i = 1; i < choice; ++i) tempQueue.pop();
+        selectedProduct = tempQueue.front();
+    }
+    else {
+        selectedProduct = products[matchingIndices[choice - 1]];
+    }
+
+    cout << "Вы выбрали: " << selectedProduct.name << "\n\n";
+    string sup = selectedProduct.name + " — $" + to_string(selectedProduct.price);
+    int filterID = selectedProduct.id;
+    if (categoryIndex == 0) {
+        cout << "Хотите вывод только совместимостимых комплектующих? (1-да, 2-нет): ";
+        int choiceFirstSort;
+        cin >> choiceFirstSort;
+        if (choiceFirstSort == 1) {
+            int filterID = selectedProduct.id;
+            Sort(categoryIndex, sortByPrice, filterID); // Передаем индекс категории
+            fork = true;
+        }
+    }
+    if (fork && categoryIndex > 0) {
+            Sort(categoryIndex, sortByPrice, filterID);
+        }
+
+    saveSelection(sup);
 }
-
-
 
 
 void Creating() {
     cout << "                               Добро пожаловать в выбор комплектующих" << endl;
+    cout << "                               Хотите еще сортировать по цене? (1-да, 2-нет): ";
+    int choiceSecondSort;
+    cin >> choiceSecondSort;
+    sortByPrice = (choiceSecondSort == 1);
     cout << "                                     Предлагаю начать выбор с процессоров" << endl << endl;
     cout << endl;
-
-
-
     ifstream inFile(filename);
     if (!inFile) {
         cout << "Ошибка: не удалось открыть файл " << filename << endl;
         return;
     }
-
-    int counter = 1;
-    int StartPos = 0;
-
     saveSelection("----------", true);
 
+    readProductsFromFile(filename);
+    bool fork=false;
+    
 
-    cout << "Список процессоров:\n";
-    readEnter(counter, StartPos);
+    for (int i = 0; i < 8; ++i) {
+        cout << "Теперь надо выбрать " << categoryNames[i] << "\n\n";
+        displayAndSelectProduct(i, fork);
+    }
 
-    cout << "                                     Теперь надо выбрать видеокартку" << endl << endl;
-
-    cout << "Список видеокарт:\n";
-    readEnter(counter, StartPos);
-
-    cout << "                                     Теперь надо выбрать материнскую плату" << endl << endl;
-
-    cout << "Список материнскую плату:\n";
-    readEnter(counter, StartPos);
-
-    cout << "                                     Теперь надо выбрать оперативную память" << endl << endl;
-
-    cout << "Список оперативной памяти:\n";
-    readEnter(counter, StartPos);
-
-    cout << "                                     Теперь надо выбрать систему охлаждения" << endl << endl;
-
-    cout << "Список систем охлаждения:\n";
-    readEnter(counter, StartPos);
-
-    cout << "                                     Теперь надо выбрать накопитель" << endl << endl;
-
-    cout << "Список накопителей:\n";
-    readEnter(counter, StartPos);
-
-    cout << "                                     Теперь надо выбрать блок питания" << endl << endl;
-
-    cout << "Список блоков питания:\n";
-    readEnter(counter, StartPos);
-
-    cout << "                                     Теперь надо выбрать корпус" << endl << endl;
-
-    cout << "Список корпусов:\n";
-    readEnter(counter, StartPos);
     saveSelection("----------");
-
+    clearProducts();
 
     cout << endl;
     cout << "                                                  ВЫ СОБРАЛИ СВОЮ СБОРКУ" << endl;
