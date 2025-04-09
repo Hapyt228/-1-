@@ -1,80 +1,80 @@
-Процессоры;Intel Core i7-12700K;$409;1
-Процессоры;Intel Core i9-12900K;$589;1
-Процессоры;AMD Ryzen 9 9950X;$649;2
-Процессоры;AMD Ryzen 9 9900X;$499;2
-Процессоры;AMD Ryzen 7 9800X3D;$479;2
-Процессоры;AMD Ryzen 7 9700X;$359;2
-Процессоры;AMD Ryzen 5 9600X;$279;2
-Процессоры;Intel Core i5-12600K;$289;1
-Процессоры;AMD Ryzen 5 7600X;$249;2
-Процессоры;AMD Ryzen 5 5600X;$199;3
-Видеокарты;Nvidia GeForce RTX 5090;$1999;1
-Видеокарты;Nvidia GeForce RTX 5080;$999;1
-Видеокарты;Nvidia GeForce RTX 5070 Ti;$749;1
-Видеокарты;Nvidia GeForce RTX 5070;$549;1
-Видеокарты;Nvidia GeForce RTX 4060 Ti (8 ГБ);$400;1
-Видеокарты;AMD Radeon RX 9070 XT;$599;2
-Видеокарты;AMD Radeon RX 9070;$549;2
-Видеокарты;AMD Radeon RX 7600 XT;$300;2
-Видеокарты;Intel Arc B580;$275;3
-Видеокарты;Intel Arc A750 (8 ГБ);$250;3
-Материнские платы;ASUS ROG MAXIMUS Z690 HERO;$599;1
-Материнские платы;MSI MEG Z790 ACE;$699;1
-Материнские платы;MSI MAG B550 TOMAHAWK;$179;3
-Материнские платы;ASRock B650M PRO RS;$189;2
-Материнские платы;MSI MEG X670E GODLIKE;$1299;2
-Материнские платы;MSI MPG Z690 EDGE WIFI;$349;1
-Материнские платы;ASRock Z790 Taichi;$499;1
-Материнские платы;GIGABYTE Z690 AORUS MASTER;$469;1
-Материнские платы;GIGABYTE B650 AORUS ELITE AX;$229;2
-Материнские платы;ASUS ROG CROSSHAIR X670E HERO;$699;2
-Оперативная память;G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30);$200;1
-Оперативная память;Corsair Vengeance DDR5-5600 (2x8GB, CL36);$150;1
-Оперативная память;G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32);$400;1
-Оперативная память;Kingston Fury Renegade DDR5-6000 (2x16GB, CL32);$350;1
-Оперативная память;Crucial DDR5-5600 (2x16GB, CL46);$300;2
-Оперативная память;G.SKILL Ripjaws V DDR4-3200 (2x8GB, CL16);$80;3
-Оперативная память;Patriot Viper Steel DDR4-3600 (2x8GB, CL18);$90;3
-Оперативная память;Corsair Vengeance RGB Pro DDR4-3600 (2x16GB, CL18);$180;3
-Оперативная память;Crucial Ballistix DDR4-3600 (2x16GB, CL16);$170;4
-Оперативная память;G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18);$220;3
-Системы охлаждения;Corsair iCUE H150i ELITE LCD XT (360 мм, AIO);$290;4
-Системы охлаждения;NZXT Kraken Z73 RGB (360 мм, AIO);$290;4
-Системы охлаждения;ARCTIC Liquid Freezer II 360 (360 мм, AIO);$150;4
-Системы охлаждения;EKWB EK-AIO 360 D-RGB (360 мм, AIO);$180;4
-Системы охлаждения;Deepcool LS720 (360 мм, AIO);$140;4
-Системы охлаждения;Noctua NH-D15 chromax.black;$120;4
-Системы охлаждения;be quiet! Dark Rock Pro 4;$100;4
-Системы охлаждения;Deepcool Assassin III;$90;4
-Системы охлаждения;Thermalright Peerless Assassin 120 SE;$50;4
-Системы охлаждения;Cooler Master Hyper 212 Black Edition;$45;4
-Накопители;Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0);$100;4
-Накопители;Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0);$110;4
-Накопители;Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0);$90;4
-Накопители;Kingston Fury Renegade 1TB (M.2 NVMe, PCIe 4.0);$130;4
-Накопители;Corsair MP600 1TB (M.2 NVMe, PCIe 4.0);$110;4
-Накопители;Samsung 970 Evo 1TB (M.2 NVMe, PCIe 3.0);$80;4
-Накопители;Seagate FireCuda 530 1TB (M.2 NVMe, PCIe 4.0);$140;4
-Накопители;SanDisk Extreme Pro 1TB (M.2 NVMe, PCIe 3.0);$100;4
-Накопители;ADATA XPG Gammix S70 1TB (M.2 NVMe, PCIe 4.0);$95;4
-Накопители;Crucial MX500 1TB (SATA SSD);$60;4
-Блоки питания;Corsair RM850x 850W (80+ Gold);$130;4
-Блоки питания;EVGA SuperNOVA 850 G5 850W (80+ Gold);$160;4
-Блоки питания;Seasonic Focus GX-850 850W (80+ Gold);$140;4
-Блоки питания;Cooler Master MWE Gold 850W (80+ Gold);$120;4
-Блоки питания;be quiet! Straight Power 11 850W (80+ Platinum);$180;4
-Блоки питания;NZXT C850 850W (80+ Gold);$120;4
-Блоки питания;Thermaltake Toughpower GF1 850W (80+ Gold);$135;4
-Блоки питания;ASUS ROG Strix 850G 850W (80+ Gold);$150;4
-Блоки питания;MSI MPG A850G 850W (80+ Gold);$130;4
-Блоки питания;Gigabyte P850GM 850W (80+ Gold);$110;4
-Корпуса;NZXT H510 Elite;$150;4
-Корпуса;Corsair 4000D Airflow;$90;4
-Корпуса;Fractal Design Meshify C;$100;4
-Корпуса;be quiet! Pure Base 500DX;$120;4
-Корпуса;Cooler Master MasterBox Q300L;$60;4
-Корпуса;Lian Li PC-O11 Dynamic;$130;4
-Корпуса;Phanteks Eclipse P400A;$90;4
-Корпуса;Corsair iCUE 4000X RGB;$110;4
-Корпуса;Thermaltake View 71 RGB;$150;4
-Корпуса;Fractal Design Define 7;$170;4
+Процессоры;Intel Core i7-12700K;409;1
+Процессоры;Intel Core i9-12900K;589;1
+Процессоры;AMD Ryzen 9 9950X;649;2
+Процессоры;AMD Ryzen 9 9900X;499;2
+Процессоры;AMD Ryzen 7 9800X3D;479;2
+Процессоры;AMD Ryzen 7 9700X;359;2
+Процессоры;AMD Ryzen 5 9600X;279;2
+Процессоры;Intel Core i5-12600K;289;1
+Процессоры;AMD Ryzen 5 7600X;249;2
+Процессоры;AMD Ryzen 5 5600X;199;3
+Видеокарты;Nvidia GeForce RTX 5090;1999;1
+Видеокарты;Nvidia GeForce RTX 5080;999;1
+Видеокарты;Nvidia GeForce RTX 5070 Ti;749;1
+Видеокарты;Nvidia GeForce RTX 5070;549;1
+Видеокарты;Nvidia GeForce RTX 4060 Ti (8 ГБ);400;1
+Видеокарты;AMD Radeon RX 9070 XT;599;2
+Видеокарты;AMD Radeon RX 9070;549;2
+Видеокарты;AMD Radeon RX 7600 XT;300;2
+Видеокарты;Intel Arc B580;275;3
+Видеокарты;Intel Arc A750 (8 ГБ);250;3
+Материнские платы;ASUS ROG MAXIMUS Z690 HERO;599;1
+Материнские платы;MSI MEG Z790 ACE;699;1
+Материнские платы;MSI MAG B550 TOMAHAWK;179;3
+Материнские платы;ASRock B650M PRO RS;189;2
+Материнские платы;MSI MEG X670E GODLIKE;1299;2
+Материнские платы;MSI MPG Z690 EDGE WIFI;349;1
+Материнские платы;ASRock Z790 Taichi;499;1
+Материнские платы;GIGABYTE Z690 AORUS MASTER;469;1
+Материнские платы;GIGABYTE B650 AORUS ELITE AX;229;2
+Материнские платы;ASUS ROG CROSSHAIR X670E HERO;699;2
+Оперативная память;G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30);200;1
+Оперативная память;Corsair Vengeance DDR5-5600 (2x8GB, CL36);150;1
+Оперативная память;G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32);400;1
+Оперативная память;Kingston Fury Renegade DDR5-6000 (2x16GB, CL32);350;1
+Оперативная память;Crucial DDR5-5600 (2x16GB, CL46);300;1
+Оперативная память;G.SKILL Ripjaws V DDR4-3200 (2x8GB, CL16);80;3
+Оперативная память;Patriot Viper Steel DDR4-3600 (2x8GB, CL18);90;3
+Оперативная память;Corsair Vengeance RGB Pro DDR4-3600 (2x16GB, CL18);180;3
+Оперативная память;Crucial Ballistix DDR4-3600 (2x16GB, CL16);170;3
+Оперативная память;G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18);220;3
+Охлаждение;Corsair iCUE H150i ELITE LCD XT (360 мм, AIO);290;4
+Охлаждение;NZXT Kraken Z73 RGB (360 мм, AIO);290;4
+Охлаждение;ARCTIC Liquid Freezer II 360 (360 мм, AIO);150;4
+Охлаждение;EKWB EK-AIO 360 D-RGB (360 мм, AIO);180;4
+Охлаждение;Deepcool LS720 (360 мм, AIO);140;4
+Охлаждение;Noctua NH-D15 chromax.black;120;4
+Охлаждение;be quiet! Dark Rock Pro 4;100;4
+Охлаждение;Deepcool Assassin III;90;4
+Охлаждение;Thermalright Peerless Assassin 120 SE;50;4
+Охлаждение;Cooler Master Hyper 212 Black Edition;45;4
+Накопители;Samsung 980 Pro 1TB (M.2 NVMe, PCIe 4.0);100;4
+Накопители;Western Digital Black SN850X 1TB (M.2 NVMe, PCIe 4.0);110;4
+Накопители;Crucial P5 Plus 1TB (M.2 NVMe, PCIe 4.0);90;4
+Накопители;Kingston Fury Renegade 1TB (M.2 NVMe, PCIe 4.0);130;4
+Накопители;Corsair MP600 1TB (M.2 NVMe, PCIe 4.0);110;4
+Накопители;Samsung 970 Evo 1TB (M.2 NVMe, PCIe 3.0);80;4
+Накопители;Seagate FireCuda 530 1TB (M.2 NVMe, PCIe 4.0);140;4
+Накопители;SanDisk Extreme Pro 1TB (M.2 NVMe, PCIe 3.0);100;4
+Накопители;ADATA XPG Gammix S70 1TB (M.2 NVMe, PCIe 4.0);95;4
+Накопители;Crucial MX500 1TB (SATA SSD);60;4
+Блоки питания;Corsair RM850x 850W (80+ Gold);130;4
+Блоки питания;EVGA SuperNOVA 850 G5 850W (80+ Gold);160;4
+Блоки питания;Seasonic Focus GX-850 850W (80+ Gold);140;4
+Блоки питания;Cooler Master MWE Gold 850W (80+ Gold);120;4
+Блоки питания;be quiet! Straight Power 11 850W (80+ Platinum);180;4
+Блоки питания;NZXT C850 850W (80+ Gold);120;4
+Блоки питания;Thermaltake Toughpower GF1 850W (80+ Gold);135;4
+Блоки питания;ASUS ROG Strix 850G 850W (80+ Gold);150;4
+Блоки питания;MSI MPG A850G 850W (80+ Gold);130;4
+Блоки питания;Gigabyte P850GM 850W (80+ Gold);110;4
+Корпуса;NZXT H510 Elite;150;4
+Корпуса;Corsair 4000D Airflow;90;4
+Корпуса;Fractal Design Meshify C;100;4
+Корпуса;be quiet! Pure Base 500DX;120;4
+Корпуса;Cooler Master MasterBox Q300L;60;4
+Корпуса;Lian Li PC-O11 Dynamic;130;4
+Корпуса;Phanteks Eclipse P400A;90;4
+Корпуса;Corsair iCUE 4000X RGB;110;4
+Корпуса;Thermaltake View 71 RGB;150;4
+Корпуса;Fractal Design Define 7;170;4

@@ -1,3 +1,4 @@
-﻿  userfunc.cpp
-C:\Users\user\source\repos\Курсач\Курсач\userfunc.cpp(62,19): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+﻿  adminfunc.cpp
+  structure.cpp
+  Создание кода...
   Курсач.vcxproj -> C:\Users\user\source\repos\Курсач\x64\Debug\Курсач.exe

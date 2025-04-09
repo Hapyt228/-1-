@@ -9,5 +9,6 @@ using namespace std;
 
 void AdminView();
 void Delete();
+void Editing();
 
 #endif#pragma once

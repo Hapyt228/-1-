@@ -24,5 +24,6 @@ extern const char* categoryNames[];
 
 void readProductsFromFile(const std::string& filename);
 void clearProducts();
+void saveQueueToFile();
 
 #endif // PRODUCT_DATA_H

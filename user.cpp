@@ -32,7 +32,7 @@ void Usermenu() {
             start = false;
             break;
         default:
-            cout << "Ошибка: выберите вариант от 1 до 3." << endl;
+            cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
     }
 }

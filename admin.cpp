@@ -6,9 +6,8 @@ void Adminmenu() {
         cout << "                                            Выберите что хотите сделать" << endl;
         cout << "                                                 1 - Просмотр файла" << endl;
         cout << "                                                 2 - Удаление из файла" << endl;
-        cout << "                                                 3 - Редактирование сборки пользователя" << endl;
-        cout << "                                                 4 - Редактирование файла" << endl;
-        cout << "                                                 6 - Выход" << endl;
+        cout << "                                                 3 - Редактирование файла" << endl;
+        cout << "                                                 4 - Выход" << endl;
 
         int choice;
         cin >> choice;
@@ -22,20 +21,14 @@ void Adminmenu() {
             Delete();
             break;
         case 3:
-
+            Editing();
             break;
         case 4:
-
-            break;
-        case 5:
-
-            break;
-        case 6:
             cout << "Спасибо за использование приложения!" << endl;
             start = false;
             break;
         default:
-            cout << "Ошибка: выберите вариант от 1 до 3." << endl;
+            cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
     }
 }

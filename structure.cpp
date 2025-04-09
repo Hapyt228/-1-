@@ -2,7 +2,7 @@
 
 const char* categoryNames[] = {
        "Процессоры", "Видеокарты", "Материнские платы", "Оперативная память",
-       "Системы охлаждения", "Накопители", "Блоки питания", "Корпуса"
+       "Охлаждение", "Накопители", "Блоки питания", "Корпуса"
 };
 Product products[MAX_PRODUCTS];
 int productCount=0;
@@ -58,4 +58,22 @@ void clearProducts() {
     while (!queueMy.empty()) {
         queueMy.pop();
     }
+}
+
+void saveQueueToFile() {
+    ofstream outFile("assembly.txt");
+    if (!outFile.is_open()) {
+        cerr << "Ошибка при открытии файла для записи!" << endl;
+        return;
+    }
+
+    queue<Product> temp = queueMy;
+
+    while (!temp.empty()) {
+        Product p = temp.front();
+        temp.pop();
+        outFile <<  p.category << ";" << p.name << ";" << p.price << ";" << p.id << "\n";
+    }
+
+    outFile.close();
 }
