@@ -1,4 +1,5 @@
 #include "structure.h"
+#include "consolecleaning.h"
 
 const char* categoryNames[] = {
        "Процессоры", "Видеокарты", "Материнские платы", "Оперативная память",
@@ -64,7 +65,7 @@ void saveQueueToFile() {
     ofstream outFile("assembly.txt");
     if (!outFile.is_open()) {
         cerr << "Ошибка при открытии файла для записи!" << endl;
-        return;
+        return;    system("cls");
     }
 
     queue<Product> temp = queueMy;

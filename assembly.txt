@@ -29,12 +29,12 @@
 Материнские платы;GIGABYTE B650 AORUS ELITE AX;229;2
 Материнские платы;ASUS ROG CROSSHAIR X670E HERO;699;2
 Оперативная память;G.SKILL Trident Z5 RGB DDR5-6000 (2x8GB, CL30);200;1
-Оперативная память;Corsair Vengeance DDR5-5600 (2x8GB, CL36);150;1
+Оперативная память;Corsair Vengeance DDR5-5600 (2x8GB, CL36);150;2
 Оперативная память;G.SKILL Trident Z5 RGB DDR5-6400 (2x16GB, CL32);400;1
 Оперативная память;Kingston Fury Renegade DDR5-6000 (2x16GB, CL32);350;1
-Оперативная память;Crucial DDR5-5600 (2x16GB, CL46);300;1
+Оперативная память;Crucial DDR5-5600 (2x16GB, CL46);300;4
 Оперативная память;G.SKILL Ripjaws V DDR4-3200 (2x8GB, CL16);80;3
-Оперативная память;Patriot Viper Steel DDR4-3600 (2x8GB, CL18);90;3
+Оперативная память;Patriot Viper Steel DDR4-3600 (2x8GB, CL18);90;2
 Оперативная память;Corsair Vengeance RGB Pro DDR4-3600 (2x16GB, CL18);180;3
 Оперативная память;Crucial Ballistix DDR4-3600 (2x16GB, CL16);170;3
 Оперативная память;G.SKILL Trident Z RGB DDR4-4000 (2x16GB, CL18);220;3

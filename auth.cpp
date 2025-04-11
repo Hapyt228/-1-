@@ -1,6 +1,7 @@
 #include "auth.h"
+#include "consolecleaning.h"
 
-const User ADMIN = { "admin", "admin123", true };
+const User ADMIN = { "admin", "admin123"};
 User users[MAX_USERS]; 
 int userCount = 1;
 User* currentUser = nullptr; 
@@ -12,9 +13,9 @@ void loadUsers() {
 
     string username, password;
     bool isAdmin;
-    while (file >> username >> password >> isAdmin) {
+    while (file >> username >> password) {
         if (userCount < MAX_USERS) {
-            users[userCount++] = { username, password, isAdmin };
+            users[userCount++] = { username, password};
         }
     }
     file.close();
@@ -24,13 +25,14 @@ void loadUsers() {
 void saveUsers() {
     ofstream file(USERS_FILE);
     for (int i = 0; i < userCount; i++) {
-        file << users[i].username << " " << users[i].password << " " << users[i].isAdmin << endl;
+        file << users[i].username << " " << users[i].password << endl;
     }
     file.close();
 }
 
 
 void registerUser() {
+    system("cls");
     if (userCount >= MAX_USERS) {
         cout << "Превышено максимальное количество пользователей!" << endl;
         return;
@@ -51,13 +53,14 @@ void registerUser() {
     cout << "Введите пароль: ";
     getline(cin, password);
 
-    users[userCount++] = { username, password, false }; 
+    users[userCount++] = { username, password}; 
     saveUsers();
     cout << "Регистрация успешна!" << endl;
 }
 
 
 void loginUser() {
+    system("cls");
     string username, password;
     cout << "Введите логин: ";
     cin.ignore();
@@ -66,7 +69,6 @@ void loginUser() {
     getline(cin, password);
 
     if (username == ADMIN.username && password == ADMIN.password) {
-        cout << "Вход выполнен: Администратор!" << endl;
         Admin = true;
         return;
     }
@@ -74,7 +76,7 @@ void loginUser() {
     for (int i = 0; i < userCount; i++) {
         if (users[i].username == username && users[i].password == password) {
             currentUser = &users[i];
-            cout << "Вход выполнен успешно!" << endl;
+            system("cls");
             return;
         }
     }

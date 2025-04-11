@@ -1,7 +1,9 @@
 #include "adminfunc.h"
+#include "consolecleaning.h"
 
 void Adminmenu() {
     bool start = true;
+    bool view = false;
     while (start) {
         cout << "                                            Выберите что хотите сделать" << endl;
         cout << "                                                 1 - Просмотр файла" << endl;
@@ -16,6 +18,7 @@ void Adminmenu() {
         switch (choice) {
         case 1:
             AdminView();
+            view = true;
             break;
         case 2:
             Delete();
@@ -29,6 +32,9 @@ void Adminmenu() {
             break;
         default:
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
+        }
+        if (start == true) {
+            Cleaning();
         }
     }
 }

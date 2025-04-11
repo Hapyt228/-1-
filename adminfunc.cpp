@@ -1,4 +1,6 @@
 #include "structure.h"
+#include "auth.h"
+#include "consolecleaning.h"
 
 using namespace std;
 
@@ -7,6 +9,7 @@ const string selectedFilename = "selected.txt";
 queue<Product> tempQueue;
 
 void AdminView() {
+    system("cls");
     readProductsFromFile(filename);
     int count=0;
     while (!queueMy.empty()) {
@@ -22,6 +25,7 @@ void AdminView() {
 
 void Delete() {
     AdminView();
+    readProductsFromFile(filename);
     int userChoice;
     cout << "Введите строку, который хотите удалить: ";
     cin >> userChoice;
@@ -47,6 +51,7 @@ void Delete() {
 }
 
 void Addition() {
+    system("cls");
     readProductsFromFile(filename);
     int choiceCategory;
     cout << "Введите категорию которую хотите добавить(от 1 до 8)" << endl;
@@ -68,7 +73,7 @@ void Addition() {
     p.id = id;
     queueMy.push(p);
     saveQueueToFile();
-    cout << "Комплектующие сохранено ";
+    cout << "Комплектующие сохранено " << endl;
     clearProducts();
 }
 
@@ -140,6 +145,7 @@ void postEditing() {
     }
     queueMy = tempQueue;
     saveQueueToFile();
+    cout << "Товар изменен!" << endl;
     clearProducts();
 }
 
@@ -147,29 +153,36 @@ void postEditing() {
 
 
 void Editing() {
+    system("cls");
     bool start = true;
+
     while (start) {
 
-    cout << "                                            Выберите что хотите сделать" << endl;
-    cout << "                                                 1 - Добавить в файл" << endl;
-    cout << "                                                 2 - Редактировать написанное в файле" << endl;
-    cout << "                                                 3 - Выход" << endl;
+        cout << "                                            Выберите что хотите сделать" << endl;
+        cout << "                                                 1 - Добавить в файл" << endl;
+        cout << "                                                 2 - Редактировать написанное в файле" << endl;
+        cout << "                                                 3 - Выход" << endl;
 
-     int choiceUser;
-     cin >> choiceUser;
-     cout << endl;
-     switch (choiceUser) {
-       case 1:
-          Addition();
-          break;
-       case 2:
-           postEditing();
-          break;
-       case 3:
-          start = false;
-          break;
-       default:
-          cout << "Ошибка: выберите вариант от 1 до 4." << endl;
-      }   
+        int choiceUser;
+        cin >> choiceUser;
+        cout << endl;
+        switch (choiceUser) {
+        case 1:
+            Addition();
+            break;
+        case 2:
+            postEditing();
+            break;
+        case 3:
+            start = false;
+            break;
+        default:
+            cout << "Ошибка: выберите вариант от 1 до 4." << endl;
+        }
+        if (start == true){
+            Cleaning();
+        }
+
+
     }
 }

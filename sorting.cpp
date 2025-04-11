@@ -1,13 +1,12 @@
 #include "auth.h"
 #include "structure.h"
-#include <queue>
+
 
 
 void Sort(int categoryIndex, bool sortByPrice, int filterID) {
-    // Очищаем очередь перед заполнением
     while (!queueMy.empty()) queueMy.pop();
 
-    // 1. Создаем временный массив
+    
     Product* tempProducts = new Product[productCount];
     int validCount = 0;
     int count=categoryIndex+1;
@@ -15,14 +14,14 @@ void Sort(int categoryIndex, bool sortByPrice, int filterID) {
     {
         count--;
     }
-    // 2. Копируем только нужные товары (с фильтрацией по категории, если задана)
+   
     for (int i = 0; i < productCount; i++) {
         if (products[i].category == categoryNames[count] && (products[i].id == filterID || products[i].id == 4)) {
             tempProducts[validCount++] = products[i];
         }
     }
 
-    // 3. Сортировка по цене (если нужно)
+   
     if (sortByPrice && validCount > 0) {
         for (int i = 0; i < validCount - 1; i++) {
             for (int j = 0; j < validCount - i - 1; j++) {
@@ -35,7 +34,7 @@ void Sort(int categoryIndex, bool sortByPrice, int filterID) {
         }
     }
 
-    // 4. Заполняем очередь
+  
     for (int i = 0; i < validCount; i++) {
         queueMy.push(tempProducts[i]);
     }
@@ -60,21 +59,21 @@ void SortOutput() {
 }
 
 void SortPrice(int categoryIndex, bool sortByPrice) {
-    // Очищаем очередь перед заполнением
+  
     while (!queueMy.empty()) queueMy.pop();
 
-    // 1. Создаем временный массив
+  
     Product* tempProducts = new Product[productCount];
     int validCount = 0;
 
-    // 2. Копируем только нужные товары (с фильтрацией по категории, если задана)
+   
     for (int i = 0; i < productCount; i++) {
         if (products[i].category == categoryNames[categoryIndex]){
             tempProducts[validCount++] = products[i];
         }
     }
 
-    // 3. Сортировка по цене (если нужно)
+   
     if (sortByPrice && validCount > 0) {
         for (int i = 0; i < validCount - 1; i++) {
             for (int j = 0; j < validCount - i - 1; j++) {
@@ -87,7 +86,7 @@ void SortPrice(int categoryIndex, bool sortByPrice) {
         }
     }
 
-    // 4. Заполняем очередь
+ 
     for (int i = 0; i < validCount; i++) {
         queueMy.push(tempProducts[i]);
     }

@@ -1,4 +1,5 @@
 #include "userfunc.h"
+#include "consolecleaning.h"
 
 void Usermenu() {
     bool start = true;
@@ -33,6 +34,9 @@ void Usermenu() {
             break;
         default:
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
+        }
+        if (start) {
+            Cleaning();
         }
     }
 }

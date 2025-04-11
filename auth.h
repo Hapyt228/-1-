@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <queue>
+
 
 using namespace std;
 const string USERS_FILE = "user.txt";
@@ -12,7 +14,6 @@ const int MAX_USERS = 100;
 struct User {
     string username;
     string password;
-    bool isAdmin;
 };
 
 extern User* currentUser;

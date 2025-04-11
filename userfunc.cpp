@@ -1,6 +1,7 @@
 #include "auth.h"
 #include "structure.h"
 #include "sorting.h"
+#include "consolecleaning.h"
 
 const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";
@@ -85,7 +86,7 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
         cin >> choiceFirstSort;
         if (choiceFirstSort == 1) {
             int filterID = selectedProduct.id;
-            Sort(categoryIndex, sortByPrice, filterID); // Передаем индекс категории
+            Sort(categoryIndex, sortByPrice, filterID); 
             fork = true;
         }
     }
@@ -94,10 +95,12 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
         }
 
     saveSelection(sup);
+    system("cls");
 }
 
 
 void Creating() {
+    system("cls");
     cout << "                               Добро пожаловать в выбор комплектующих" << endl;
     cout << "                               Хотите еще сортировать по цене? (1-да, 2-нет): ";
     int choiceSecondSort;
@@ -135,6 +138,7 @@ void Creating() {
 }
 
 void View() {
+    system("cls");
     ifstream inFile(selectedFilename);
     string line;
     int sum = 0;
@@ -163,6 +167,7 @@ void View() {
 }
 
 void Deletespork() {
+    system("cls");
     ifstream inFile(selectedFilename);
     ofstream tempFile("temp.txt");
     string line;
@@ -187,6 +192,7 @@ void Deletespork() {
 
     inFile.close();
     tempFile.close();
+    cout << "Сборка удалена" << endl;
 
     remove(selectedFilename.c_str());
     rename("temp.txt", selectedFilename.c_str());

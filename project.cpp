@@ -1,6 +1,7 @@
 #include "auth.h"
 #include "user.h"
 #include "admin.h"
+#include "consolecleaning.h"
 
 int main() {
     setlocale(LC_ALL, "Russian");
@@ -34,9 +35,13 @@ int main() {
         default:
             cout << "Неверный выбор! Попробуйте снова." << endl;
         }
+        if (!loggedIn) {
+            system("cls");
+        }
     }
 
     if (checkIfAdmin()) {
+        system("cls");
         cout << "Добро пожаловать, администратор!" << endl;
         Adminmenu();
     }
