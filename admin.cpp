@@ -5,11 +5,11 @@ void Adminmenu() {
     bool start = true;
     bool view = false;
     while (start) {
-        cout << "                                            Выберите что хотите сделать" << endl;
-        cout << "                                                 1 - Просмотр файла" << endl;
-        cout << "                                                 2 - Удаление из файла" << endl;
-        cout << "                                                 3 - Редактирование файла" << endl;
-        cout << "                                                 4 - Выход" << endl;
+        cout << "Выберите что хотите сделать" << endl;
+        cout << "1 - Просмотр файла" << endl;
+        cout << "2 - Удаление из файла" << endl;
+        cout << "3 - Редактирование файла" << endl;
+        cout << "4 - Выход" << endl;
 
         int choice;
         cin >> choice;
@@ -34,6 +34,7 @@ void Adminmenu() {
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
         if (start == true) {
+            cin.ignore();
             Cleaning();
         }
     }

@@ -8,11 +8,11 @@ void Usermenu() {
     cout << endl;
 
     while (start) {
-        cout << "                                            Выберите что хотите сделать" << endl;
-        cout << "                                                 1 - Создание сборки" << endl;
-        cout << "                                                 2 - Просмотр сборки" << endl;
-        cout << "                                                 3 - Удаление сборки" << endl;
-        cout << "                                                 4 - Выход" << endl;
+        cout << "Выберите что хотите сделать" << endl;
+        cout << "1 - Создание сборки" << endl;
+        cout << "2 - Просмотр сборки" << endl;
+        cout << "3 - Удаление сборки" << endl;
+        cout << "4 - Выход" << endl;
 
         int choice;
         cin >> choice;
@@ -36,6 +36,7 @@ void Usermenu() {
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
         if (start) {
+            cin.ignore();
             Cleaning();
         }
     }

@@ -131,6 +131,7 @@
     <ClCompile Include="adminfunc.cpp" />
     <ClCompile Include="auth.cpp" />
     <ClCompile Include="consolecleaning.cpp" />
+    <ClCompile Include="hash.cpp" />
     <ClCompile Include="sorting.cpp" />
     <ClCompile Include="structure.cpp" />
     <ClCompile Include="user.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="admin.h" />
     <ClInclude Include="adminfunc.h" />
     <ClInclude Include="consolecleaning.h" />
+    <ClInclude Include="hash.h" />
     <ClInclude Include="sorting.h" />
     <ClInclude Include="structure.h" />
     <ClInclude Include="user.h" />

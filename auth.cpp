@@ -1,5 +1,7 @@
 #include "auth.h"
 #include "consolecleaning.h"
+#include "hash.h"
+
 
 const User ADMIN = { "admin", "admin123"};
 User users[MAX_USERS]; 
@@ -53,7 +55,7 @@ void registerUser() {
     cout << "Введите пароль: ";
     getline(cin, password);
 
-    users[userCount++] = { username, password}; 
+    users[userCount++] = { username,  hashPassword(password)};
     saveUsers();
     cout << "Регистрация успешна!" << endl;
 }
@@ -74,7 +76,7 @@ void loginUser() {
     }
 
     for (int i = 0; i < userCount; i++) {
-        if (users[i].username == username && users[i].password == password) {
+        if (users[i].username == username && users[i].password == hashPassword(password)) {
             currentUser = &users[i];
             system("cls");
             return;

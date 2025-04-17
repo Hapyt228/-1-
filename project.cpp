@@ -36,7 +36,7 @@ int main() {
             cout << "Неверный выбор! Попробуйте снова." << endl;
         }
         if (!loggedIn) {
-            system("cls");
+            Cleaning();
         }
     }
 

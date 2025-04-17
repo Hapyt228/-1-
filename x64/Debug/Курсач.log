@@ -1,2 +1,9 @@
-﻿  consolecleaning.cpp
+﻿  auth.cpp
+C:\Users\user\source\repos\Курсач\Курсач\auth.cpp(17,10): warning C4101: isAdmin: неиспользованная локальная переменная
+  hash.cpp
+  userfunc.cpp
+C:\Users\user\source\repos\Курсач\Курсач\userfunc.cpp(63,19): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  project.cpp
+C:\Users\user\source\repos\Курсач\Курсач\project.cpp(26,28): warning C4305: =: усечение из "bool (__cdecl *)(void)" в "bool"
+  Создание кода...
   Курсач.vcxproj -> C:\Users\user\source\repos\Курсач\x64\Debug\Курсач.exe

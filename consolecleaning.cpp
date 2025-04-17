@@ -7,7 +7,6 @@ void Cleaning() {
     cout << "   Нажмите Enter для продолжения " << endl;
     string Enter;
     bool sup=true;
-    cin.ignore();
     while (sup) {
         getline(cin, Enter);
         if (Enter.empty()) {

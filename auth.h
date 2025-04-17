@@ -17,6 +17,7 @@ struct User {
 };
 
 extern User* currentUser;
+extern int userCount;
 
 
 void loadUsers();

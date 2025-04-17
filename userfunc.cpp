@@ -106,7 +106,8 @@ void Creating() {
     int choiceSecondSort;
     cin >> choiceSecondSort;
     sortByPrice = (choiceSecondSort == 1);
-    cout << "                                     Предлагаю начать выбор с процессоров" << endl << endl;
+    system("cls");
+    cout << "Предлагаю начать выбор с процессоров" << endl << endl;
     cout << endl;
     ifstream inFile(filename);
     if (!inFile) {
@@ -130,9 +131,6 @@ void Creating() {
     cout << endl;
     cout << "                                                  ВЫ СОБРАЛИ СВОЮ СБОРКУ" << endl;
     cout << "                                                  Нажмите 2 чтобы просмотреть ее" << endl;
-    cout << endl;
-    cout << endl;
-    cout << endl;
 
     inFile.close();
 }
