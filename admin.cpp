@@ -11,6 +11,7 @@ void Adminmenu() {
         cout << "3 - Редактирование файла" << endl;
         cout << "4 - Выход" << endl;
 
+
         int choice;
         cin >> choice;
         cout << endl;
@@ -29,6 +30,9 @@ void Adminmenu() {
         case 4:
             cout << "Спасибо за использование приложения!" << endl;
             start = false;
+            break;
+        case 5: 
+            Menuadminuser();
             break;
         default:
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;

@@ -9,15 +9,19 @@ int userCount = 1;
 User* currentUser = nullptr; 
 bool Admin=false;
 
+
 void loadUsers() {
+    queue <User> client;
     ifstream file(USERS_FILE);
     if (!file) return;
-
+    User p;
     string username, password;
     bool isAdmin;
     while (file >> username >> password) {
         if (userCount < MAX_USERS) {
             users[userCount++] = { username, password};
+            p.username = username;
+           client.push(p);
         }
     }
     file.close();
@@ -26,7 +30,7 @@ void loadUsers() {
 
 void saveUsers() {
     ofstream file(USERS_FILE);
-    for (int i = 0; i < userCount; i++) {
+    for (int i = 1; i < userCount; i++) {
         file << users[i].username << " " << users[i].password << endl;
     }
     file.close();
@@ -45,7 +49,7 @@ void registerUser() {
     cin.ignore();
     getline(cin, username);
 
-    for (int i = 0; i < userCount; i++) {
+    for (int i = 1; i < userCount; i++) {
         if (users[i].username == username) {
             cout << "Такой пользователь уже существует!" << endl;
             return;
@@ -75,7 +79,7 @@ void loginUser() {
         return;
     }
 
-    for (int i = 0; i < userCount; i++) {
+    for (int i = 1; i < userCount; i++) {
         if (users[i].username == username && users[i].password == hashPassword(password)) {
             currentUser = &users[i];
             system("cls");

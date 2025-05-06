@@ -17,6 +17,7 @@ struct User {
 };
 
 extern User* currentUser;
+extern User users[MAX_USERS];
 extern int userCount;
 
 

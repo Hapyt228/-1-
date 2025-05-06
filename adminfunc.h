@@ -8,5 +8,6 @@ using namespace std;
 void AdminView();
 void Delete();
 void Editing();
+void Menuadminuser();
 
 #endif#pragma once

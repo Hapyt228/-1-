@@ -1,6 +1,7 @@
 #include "structure.h"
 #include "auth.h"
 #include "consolecleaning.h"
+#include "hash.h"
 
 using namespace std;
 
@@ -155,7 +156,6 @@ void postEditing() {
 void Editing() {
     system("cls");
     bool start = true;
-
     while (start) {
 
         cout << "                                            Выберите что хотите сделать" << endl;
@@ -180,6 +180,103 @@ void Editing() {
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
         if (start == true){
+            Cleaning();
+        }
+
+
+    }
+}
+
+void AddUser() { 
+    system("cls");
+    if (userCount >= MAX_USERS) {
+        cout << "Превышено максимальное количество пользователей!" << endl;
+        return;
+    }
+
+    string username, password;
+    cout << "Введите логин пользователя: ";
+    cin.ignore();
+    getline(cin, username);
+
+    for (int i = 0; i < userCount; i++) {
+        if (users[i].username == username) {
+            cout << "Пользователь с таким логином уже существует!" << endl;
+            return;
+        }
+    }
+
+    cout << "Введите пароль: ";
+    getline(cin, password);
+
+    users[userCount++] = { username, hashPassword(password) };
+    saveUsers();
+    cout << "Пользователь успешно добавлен!" << endl;
+}
+
+void DeleteUser(){
+    system("cls");
+    cout << "Список пользователей:" << endl;
+    for (int i = 1; i < userCount; i++) {
+        cout << i << ": " << users[i].username << endl;
+    }
+
+    int index;
+    cout << "Введите индекс пользователя для удаления: ";
+    cin >> index;
+    cin.ignore;
+
+    if (index < 0 || index >= userCount) {
+        cout << "Неверный индекс!" << endl;
+        return;
+    }
+
+    for (int i = index; i < userCount - 1; i++) {
+        users[i] = users[i + 1];
+    }
+
+    userCount--;
+    saveUsers();
+    cout << "Пользователь успешно удалён!" << endl;
+}
+
+
+
+void Menuadminuser() {
+    system("cls");
+    bool start = true;
+    while (start) {
+
+        cout << "                                            Выберите что хотите сделать" << endl;
+        cout << "                                                 1 - Просмотреть пользователей" << endl;
+        cout << "                                                 2 - Добавить пользователя" << endl;
+        cout << "                                                 3 - Удалить пользователя" << endl;
+        cout << "                                                 4 - Выход" << endl;
+
+        int choiceUser;
+        cin >> choiceUser;
+        cout << endl;
+        switch (choiceUser) {
+        case 1:
+            cout << "Список пользователей:" << endl;
+            for (int i = 1; i < userCount; i++) {
+                cout << i << ": " << users[i].username << endl;
+            }
+            cin.ignore();
+            break;
+        case 2:
+            AddUser();
+            break;
+        case 3:
+            DeleteUser();
+            break;
+        case 4:
+            start = false;
+            break;
+        default:
+            cout << "Ошибка: выберите вариант от 1 до 4." << endl;
+        }
+        if (start == true) {
             Cleaning();
         }
 
