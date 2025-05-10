@@ -2,6 +2,7 @@
 #include "auth.h"
 #include "consolecleaning.h"
 #include "hash.h"
+#include "proferka.h"
 
 using namespace std;
 
@@ -9,27 +10,152 @@ const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";
 queue<Product> tempQueue;
 
-void AdminView() {
+void SearchProducts() {
     system("cls");
     readProductsFromFile(filename);
-    int count=0;
+    if (queueMy.empty()) {
+        cout << "Нет товаров для поиска.\n";
+        return;
+    }
+
+    int categoryIndex = 0;
+    cout << "Введите категорию в которой хотите поиск (от 1 до 8): ";
+    getValidatedIntFromInput(categoryIndex);
+    while (categoryIndex < 0 || categoryIndex > 8) {
+        cout << "Введите заново категорию от 1 до 8" << endl;
+        getValidatedIntFromInput(categoryIndex);
+    }
+
+    int matchingIndices[MAX_PRODUCTS];
+    int indexCounter = 0;
+    for (int i = 0; i < productCount; ++i) {
+        if (products[i].category == categoryNames[categoryIndex]) {
+            matchingIndices[indexCounter++] = i;
+        }
+    }
+
+        cout << "Список " << categoryNames[categoryIndex] << ":\n";
+        for (int i = 0; i < indexCounter; ++i) {
+            int index = matchingIndices[i];
+            cout << i + 1 << ") " << products[index].name
+                << " — $" << products[index].price << "\n";
+        }
+
+    cout << endl << endl;
+
+    cout << "Выберите тип поиска:\n";
+    cout << "1) По производителю\n";
+    cout << "2) По цене\n";
+    int choice;
+    getValidatedIntFromInput(choice);
+    while (choice < 0 || choice > 3) {
+        cout << "Введите заново категорию от 1 до 2" << endl;
+        getValidatedIntFromInput(choice);
+    }
+
+
+
+    string producer;
+    int price;
+    bool flag = false;
+    int i = 0;
+
+    if (choice == 2) {
+        cout << "Введите максимальную цену: ";
+        getValidatedIntFromInput(price);
+    }
+    if (choice == 1) {
+        cout << "Введите производителя: ";
+        getline(cin, producer);
+    }
+
     while (!queueMy.empty()) {
         Product current = queueMy.front();
-        cout << count+1 << ") " << "[" << current.category << "] " << current.name << " — $" << current.price << endl;
+        queueMy.pop();
+
+        if (choice == 2 && products[i].category == categoryNames[categoryIndex]) {
+            if (current.price <= price) {
+                cout << "[" << current.category << "] " << current.name << " — $" << current.price << endl;
+                flag = true;
+            }
+        }
+        if (choice == 1 && products[i].category == categoryNames[categoryIndex]) {
+            string sup = current.name;
+            for (size_t i = 0; i < producer.length(); ++i) {
+                producer[i] = toupper(producer[i]);
+                sup[i] = toupper(sup[i]);
+            }
+            size_t pos = sup.find(producer);
+            if (pos != string::npos) {
+                cout << "[" << current.category << "] " << current.name << " — $" << current.price << endl;
+                flag = true;
+            }
+        }
+      tempQueue.push(current);
+      i++;
+    }
+    if (choice == 1 && !flag) {
+       cout << "Товаров с такой ценой нету" << endl;
+    }
+    else if (choice == 2 && !flag) {
+        cout << "Товаров с таким производителем нету" << endl;
+    }
+
+
+    queueMy = tempQueue;
+    clearProducts();
+    Cleaning();
+}
+
+void AdminViewdefolt() {
+    system("cls");
+    readProductsFromFile(filename);
+    int count = 0;
+    while (!queueMy.empty()) {
+        Product current = queueMy.front();
+        cout << count + 1 << ") " << "[" << current.category << "] " << current.name << " — $" << current.price << endl;
         queueMy.pop();
         tempQueue.push(current);
         count++;
     }
+    cout << endl << endl;
     queueMy = tempQueue;
+
     clearProducts();
 }
 
+
+void AdminView() {
+    system("cls");
+    int choice;
+    do {
+        cout << "3) Просмотр всех товаров\n";
+        cout << "2) Поиск по производителю или цене\n";
+        cout << "1) Выход\n";
+        getValidatedIntFromInput(choice);
+        switch (choice) {
+        case 3:
+            AdminViewdefolt();
+            break;
+        case 2:
+            SearchProducts();
+            break;
+        case 1:
+            break;
+        default:
+            cout << "Ошибка: выберите вариант от 1 до 3." << endl;;
+            choice = 0;
+            break;
+        } 
+    } while (choice != 1);
+}
+
 void Delete() {
-    AdminView();
+    AdminViewdefolt();
     readProductsFromFile(filename);
     int userChoice;
     cout << "Введите строку, который хотите удалить: ";
-    cin >> userChoice;
+    getValidatedIntFromInput(userChoice);
         queue<Product> tempQueue;
         int currentIndex=0;
 
@@ -56,18 +182,21 @@ void Addition() {
     readProductsFromFile(filename);
     int choiceCategory;
     cout << "Введите категорию которую хотите добавить(от 1 до 8)" << endl;
-    cin >> choiceCategory;
+    getValidatedIntFromInput(choiceCategory);
+    while (choiceCategory < 0 || choiceCategory > 8) {
+        cout << "Введите заново категорию от 1 до 8" << endl;
+        getValidatedIntFromInput(choiceCategory);
+    }
     Product p;
     string name;
     cout << "Введите название товара " << endl;
-    cin.ignore();
     getline(cin, name);
     int price;
     cout << "Введите стоимость товара " << endl;
-    cin >> price;
+    getValidatedIntFromInput(price);
     int id;
     cout << "Введите айди товара " << endl;
-    cin >> id;
+    getValidatedIntFromInput(id);
     p.category = categoryNames[choiceCategory-1];
     p.name = name;
     p.price = price;
@@ -79,11 +208,11 @@ void Addition() {
 }
 
 void postEditing() {
-    AdminView();
+    AdminViewdefolt();
     readProductsFromFile(filename);
     int choice;
     cout << "Выберите строку где хотите изменить ";
-    cin >> choice;
+    getValidatedIntFromInput(choice);
     queue<Product> tempQueue;
     int currentIndex=0;
 
@@ -100,7 +229,7 @@ void postEditing() {
             cout << "Выберите что хотите изменить (1- категорию, 2-название, 3-цена, 4-айди): " << endl;
             bool sup = true;
             while (sup) {
-                cin >> choiceUser;
+                getValidatedIntFromInput(choiceUser);
                 int choiceCategory;
                 string name;
                 int price;
@@ -108,14 +237,13 @@ void postEditing() {
                 switch (choiceUser) {
                 case 1:
                     cout << "Введите категорию на которую хотите изменить(от 1 до 8) " << endl;
-                    cin >> choiceCategory;
+                    getValidatedIntFromInput(choiceCategory);
                     current.category = categoryNames[choiceCategory - 1];
                     sup = false;
                     tempQueue.push(current);
                     break;
                 case 2:                    
                     cout << "Введите новое название товара " << endl;
-                    cin.ignore();
                     getline(cin, name);
                     current.name = name;
                     sup = false;
@@ -123,20 +251,20 @@ void postEditing() {
                     break;
                 case 3:
                     cout << "Введите новую стоимость товара " << endl;
-                    cin >> price;
+                    getValidatedIntFromInput(price);
                     current.price = price;
                     sup = false;
                     tempQueue.push(current);
                     break;
                 case 4:
                     cout << "Введите новое айди товара " << endl;
-                    cin >> id;
+                    getValidatedIntFromInput(id);
                     current.id = id;
                     sup = false;
                     tempQueue.push(current);
                     break;
                 default:
-                    cout << "Ошибка: выберите вариант от 1 до 5." << endl;
+                    cout << "Ошибка: выберите вариант от 1 до 4." << endl;
                     break;
                 }
             }
@@ -164,7 +292,7 @@ void Editing() {
         cout << "                                                 3 - Выход" << endl;
 
         int choiceUser;
-        cin >> choiceUser;
+        getValidatedIntFromInput(choiceUser);
         cout << endl;
         switch (choiceUser) {
         case 1:
@@ -180,6 +308,7 @@ void Editing() {
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
         if (start == true){
+             
             Cleaning();
         }
 
@@ -196,7 +325,6 @@ void AddUser() {
 
     string username, password;
     cout << "Введите логин пользователя: ";
-    cin.ignore();
     getline(cin, username);
 
     for (int i = 0; i < userCount; i++) {
@@ -223,8 +351,8 @@ void DeleteUser(){
 
     int index;
     cout << "Введите индекс пользователя для удаления: ";
-    cin >> index;
-    cin.ignore;
+    getValidatedIntFromInput(index);
+   
 
     if (index < 0 || index >= userCount) {
         cout << "Неверный индекс!" << endl;
@@ -254,7 +382,8 @@ void Menuadminuser() {
         cout << "                                                 4 - Выход" << endl;
 
         int choiceUser;
-        cin >> choiceUser;
+        getValidatedIntFromInput(choiceUser);
+        
         cout << endl;
         switch (choiceUser) {
         case 1:
@@ -262,7 +391,6 @@ void Menuadminuser() {
             for (int i = 1; i < userCount; i++) {
                 cout << i << ": " << users[i].username << endl;
             }
-            cin.ignore();
             break;
         case 2:
             AddUser();
@@ -277,6 +405,7 @@ void Menuadminuser() {
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
         if (start == true) {
+             
             Cleaning();
         }
 

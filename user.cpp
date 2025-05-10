@@ -1,5 +1,7 @@
 #include "userfunc.h"
 #include "consolecleaning.h"
+#include "proferka.h"
+
 
 void Usermenu() {
     bool start = true;
@@ -15,7 +17,8 @@ void Usermenu() {
         cout << "4 - Выход" << endl;
 
         int choice;
-        cin >> choice;
+        getValidatedIntFromInput(choice);
+       
         cout << endl;
 
         switch (choice) {
@@ -36,7 +39,6 @@ void Usermenu() {
             cout << "Ошибка: выберите вариант от 1 до 4." << endl;
         }
         if (start) {
-            cin.ignore();
             Cleaning();
         }
     }

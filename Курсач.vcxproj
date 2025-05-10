@@ -132,6 +132,7 @@
     <ClCompile Include="auth.cpp" />
     <ClCompile Include="consolecleaning.cpp" />
     <ClCompile Include="hash.cpp" />
+    <ClCompile Include="proferka.cpp" />
     <ClCompile Include="sorting.cpp" />
     <ClCompile Include="structure.cpp" />
     <ClCompile Include="user.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="adminfunc.h" />
     <ClInclude Include="consolecleaning.h" />
     <ClInclude Include="hash.h" />
+    <ClInclude Include="proferka.h" />
     <ClInclude Include="sorting.h" />
     <ClInclude Include="structure.h" />
     <ClInclude Include="user.h" />

@@ -46,8 +46,7 @@ void registerUser() {
 
     string username, password;
     cout << "Введите логин: ";
-    cin.ignore();
-    getline(cin, username);
+    getline(cin, username);  
 
     for (int i = 1; i < userCount; i++) {
         if (users[i].username == username) {
@@ -57,9 +56,9 @@ void registerUser() {
     }
 
     cout << "Введите пароль: ";
-    getline(cin, password);
+    getline(cin, password);  
 
-    users[userCount++] = { username,  hashPassword(password)};
+    users[userCount++] = { username,  hashPassword(password) };
     saveUsers();
     cout << "Регистрация успешна!" << endl;
 }
@@ -69,10 +68,9 @@ void loginUser() {
     system("cls");
     string username, password;
     cout << "Введите логин: ";
-    cin.ignore();
-    getline(cin, username);
+    getline(cin, username);  
     cout << "Введите пароль: ";
-    getline(cin, password);
+    getline(cin, password);  
 
     if (username == ADMIN.username && password == ADMIN.password) {
         Admin = true;
@@ -89,6 +87,7 @@ void loginUser() {
 
     cout << "Неверный логин или пароль!" << endl;
 }
+
 
 
 string getCurrentUser() {

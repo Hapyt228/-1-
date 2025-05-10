@@ -6,7 +6,6 @@ string hashPassword(const std::string& password) {
 
     for (size_t i = 0; i < password.length(); ++i) {
         char c = password[i];
-        // Простейшее хеширование: XOR + смещение + примитивная "солянка"
         char hashedChar = (c ^ prime) + (i % 7);
         hashed += hashedChar;
     }

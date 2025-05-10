@@ -2,6 +2,7 @@
 #include "structure.h"
 #include "sorting.h"
 #include "consolecleaning.h"
+#include "proferka.h"
 
 const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";
@@ -58,12 +59,13 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
 
     cout << "\nВведите номер для выбора: ";
     int choice;
-    cin >> choice;
+    getValidatedIntFromInput(choice);
+    
 
     int maxChoice = fork ? queueMy.size() : indexCounter;
-    if (choice < 1 || choice > maxChoice) {
+    while (choice < 1 || choice > maxChoice) {
         cout << "Неверный номер. Попробуйте снова.\n";
-        return;
+        getValidatedIntFromInput(choice);
     }
 
     Product selectedProduct;
@@ -83,7 +85,7 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
     if (categoryIndex == 0) {
         cout << "Хотите вывод только совместимостимых комплектующих? (1-да, 2-нет): ";
         int choiceFirstSort;
-        cin >> choiceFirstSort;
+        getValidatedIntFromInput(choiceFirstSort);
         if (choiceFirstSort == 1) {
             int filterID = selectedProduct.id;
             Sort(categoryIndex, sortByPrice, filterID); 
@@ -95,7 +97,7 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
         }
 
     saveSelection(sup);
-    system("cls");
+    Cleaning();
 }
 
 
@@ -104,8 +106,12 @@ void Creating() {
     cout << "                               Добро пожаловать в выбор комплектующих" << endl;
     cout << "                               Хотите еще сортировать по цене? (1-да, 2-нет): ";
     int choiceSecondSort;
-    cin >> choiceSecondSort;
-    sortByPrice = (choiceSecondSort == 1);
+    getValidatedIntFromInput(choiceSecondSort);
+    if (choiceSecondSort == 1) {
+        int categoryIndex = 0;
+        bool sortByPrice = true;
+        SortPrice(categoryIndex, sortByPrice);
+    }
     system("cls");
     cout << "Предлагаю начать выбор с процессоров" << endl << endl;
     cout << endl;

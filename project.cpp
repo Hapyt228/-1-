@@ -2,6 +2,7 @@
 #include "user.h"
 #include "admin.h"
 #include "consolecleaning.h"
+#include "proferka.h"
 
 int main() {
     setlocale(LC_ALL, "Russian");
@@ -16,14 +17,13 @@ int main() {
         cout << "2. Регистрация" << endl;
         cout << "3. Выход" << endl;
         cout << "Выберите действие: ";
-        cin >> loginChoice;
-
+        getValidatedIntFromInput(loginChoice);
         switch (loginChoice) {
         case 1:
             loginUser();
             loggedIn = currentUser != nullptr;
             if (checkIfAdmin()) {
-                loggedIn = checkIfAdmin;
+                loggedIn = true;
             }
             break;
         case 2:
