@@ -24,6 +24,7 @@ int main() {
             break;
         case 2:
             registerUser();
+            Cleaning();
             break;
         case 3:
             cout << "Выход из программы." << endl;
