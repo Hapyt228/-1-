@@ -1,2 +1,3 @@
-﻿  adminfunc.cpp
+﻿  auth.cpp
+C:\Users\user\source\repos\Курсач\Курсач\auth.cpp(19,10): warning C4101: isAdmin: неиспользованная локальная переменная
   Курсач.vcxproj -> C:\Users\user\source\repos\Курсач\x64\Debug\Курсач.exe

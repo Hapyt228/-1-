@@ -76,4 +76,3 @@
 Корпуса;Phanteks Eclipse P400A;90;4
 Корпуса;Corsair iCUE 4000X RGB;110;4
 Корпуса;Thermaltake View 71 RGB;150;4
-Корпуса;Fractal Design Define 7;170;4

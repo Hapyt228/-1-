@@ -49,7 +49,7 @@ void registerUser() {
     getline(cin, username);  
 
     for (int i = 1; i < userCount; i++) {
-        if (users[i].username == username) {
+        if (users[i].username == username && username == ADMIN.username) {  
             cout << "Такой пользователь уже существует!" << endl;
             return;
         }
@@ -58,7 +58,8 @@ void registerUser() {
     cout << "Введите пароль: ";
     getline(cin, password);  
 
-    users[userCount++] = { username,  hashPassword(password) };
+    users[userCount] = { username,  hashPassword(password) };
+    currentUser = &users[userCount];
     saveUsers();
     cout << "Регистрация успешна!" << endl;
 }
@@ -73,7 +74,8 @@ void loginUser() {
     getline(cin, password);  
 
     if (username == ADMIN.username && password == ADMIN.password) {
-        Admin = true;
+        static User adminUser = ADMIN;
+        currentUser = &adminUser;
         return;
     }
 
@@ -96,5 +98,5 @@ string getCurrentUser() {
 
 
 bool checkIfAdmin() {
-    return Admin;
+    return currentUser != nullptr && currentUser->username == "admin";
 }

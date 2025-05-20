@@ -21,32 +21,29 @@ int main() {
         switch (loginChoice) {
         case 1:
             loginUser();
-            loggedIn = currentUser != nullptr;
-            if (checkIfAdmin()) {
-                loggedIn = true;
-            }
             break;
         case 2:
             registerUser();
             break;
         case 3:
             cout << "Выход из программы." << endl;
-            return 0;  
+            return 0;
         default:
             cout << "Неверный выбор! Попробуйте снова." << endl;
+        }
+
+        if (checkIfAdmin()) {
+            system("cls");
+            cout << "Добро пожаловать, администратор!" << endl;
+            Adminmenu();
+        }
+        else {
+            Usermenu();
         }
         if (!loggedIn) {
             Cleaning();
         }
-    }
 
-    if (checkIfAdmin()) {
-        system("cls");
-        cout << "Добро пожаловать, администратор!" << endl;
-        Adminmenu();
-    }
-    else {
-        Usermenu();
     }
 
     return 0;

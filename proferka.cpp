@@ -1,8 +1,12 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "userfunc.h"
+#include "consolecleaning.h"
+#include "proferka.h"
 
 using namespace std;
+
 
 int getValidatedIntFromInput(int& value) {
     string input;

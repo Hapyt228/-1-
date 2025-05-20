@@ -21,10 +21,11 @@ void SearchProducts() {
     int categoryIndex = 0;
     cout << "¬ведите категорию в которой хотите поиск (от 1 до 8): ";
     getValidatedIntFromInput(categoryIndex);
-    while (categoryIndex < 0 || categoryIndex > 8) {
+    while (categoryIndex < 1 || categoryIndex > 9) {
         cout << "¬ведите заново категорию от 1 до 8" << endl;
         getValidatedIntFromInput(categoryIndex);
     }
+    categoryIndex -= 1;
 
     int matchingIndices[MAX_PRODUCTS];
     int indexCounter = 0;
@@ -61,38 +62,73 @@ void SearchProducts() {
     int i = 0;
 
     if (choice == 2) {
+        Product temp[MAX_PRODUCTS];
+        int size = 0;
         cout << "¬ведите максимальную цену: ";
         getValidatedIntFromInput(price);
+        while (!queueMy.empty() && size < MAX_PRODUCTS) {
+            temp[size++] = queueMy.front();
+            queueMy.pop();
+        }
+
+        for (int i = 0; i < size - 1; ++i) {
+            int minIndex = i;
+            for (int j = i + 1; j < size; ++j) {
+                if (temp[j].price < temp[minIndex].price) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex != i) {
+                Product t = temp[i];
+                temp[i] = temp[minIndex];
+                temp[minIndex] = t;
+            }
+        }
+
+        int left = 0;
+        int right = size - 1;
+        int lastValidIndex = -1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (temp[mid].price <= price) {
+                lastValidIndex = mid;
+                left = mid + 1;
+            }
+            else {
+                right = mid - 1;
+            }
+        }
+
+        bool found = false;
+        for (int i = 0; i <= lastValidIndex; ++i) {
+            if (temp[i].category == categoryNames[categoryIndex]) {
+                cout << "[" << temp[i].category << "] " << temp[i].name << " Ч $" << temp[i].price << endl;
+                found = true;
+            }
+        }
     }
     if (choice == 1) {
         cout << "¬ведите производител€: ";
         getline(cin, producer);
-    }
-
-    while (!queueMy.empty()) {
-        Product current = queueMy.front();
-        queueMy.pop();
-
-        if (choice == 2 && products[i].category == categoryNames[categoryIndex]) {
-            if (current.price <= price) {
-                cout << "[" << current.category << "] " << current.name << " Ч $" << current.price << endl;
-                flag = true;
+        while (!queueMy.empty()) {
+            Product current = queueMy.front();
+            queueMy.pop();
+            if (choice == 1 && products[i].category == categoryNames[categoryIndex]) {
+                string sup = current.name;
+                for (size_t i = 0; i < producer.length(); ++i) {
+                    producer[i] = toupper(producer[i]);
+                    sup[i] = toupper(sup[i]);
+                }
+                size_t pos = sup.find(producer);
+                if (pos != string::npos) {
+                    cout << "[" << current.category << "] " << current.name << " Ч $" << current.price << endl;
+                    flag = true;
+                }
             }
+            tempQueue.push(current);
+            i++;
         }
-        if (choice == 1 && products[i].category == categoryNames[categoryIndex]) {
-            string sup = current.name;
-            for (size_t i = 0; i < producer.length(); ++i) {
-                producer[i] = toupper(producer[i]);
-                sup[i] = toupper(sup[i]);
-            }
-            size_t pos = sup.find(producer);
-            if (pos != string::npos) {
-                cout << "[" << current.category << "] " << current.name << " Ч $" << current.price << endl;
-                flag = true;
-            }
-        }
-      tempQueue.push(current);
-      i++;
     }
     if (choice == 1 && !flag) {
        cout << "“оваров с такой ценой нету" << endl;

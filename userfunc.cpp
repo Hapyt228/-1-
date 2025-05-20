@@ -7,6 +7,7 @@
 const string filename = "assembly.txt";
 const string selectedFilename = "selected.txt";
 bool sortByPrice = false;
+bool SortByName = false;
 
 void saveSelection(const string& selection, bool newcreating = false) {
     ofstream file(selectedFilename, ios::app);
@@ -40,8 +41,7 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
         }
     }
 
-
-    if (!fork && !sortByPrice) {
+    if (!fork && !sortByPrice && !SortByName) {
         cout << "Список " << categoryNames[categoryIndex] << ":\n";
         for (int i = 0; i < indexCounter; ++i) {
             int index = matchingIndices[i];
@@ -52,9 +52,16 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
     else if(fork){
         SortOutput();
     }
-    else {
+    else if(!SortByName){
+        fork = true;
         SortPrice(categoryIndex, sortByPrice);
-        SortOutputPrice();
+        SortOutput();
+    }
+    else {
+        fork = true;
+        int filterID = 0;
+        SortName(categoryIndex, filterID);
+        SortOutput();
     }
 
     cout << "\nВведите номер для выбора: ";
@@ -86,15 +93,23 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
         cout << "Хотите вывод только совместимостимых комплектующих? (1-да, 2-нет): ";
         int choiceFirstSort;
         getValidatedIntFromInput(choiceFirstSort);
-        if (choiceFirstSort == 1) {
+        if (choiceFirstSort == 1 && !SortByName) {
             int filterID = selectedProduct.id;
             Sort(categoryIndex, sortByPrice, filterID); 
-            fork = true;
+        }
+        if (choiceFirstSort == 1 && SortByName) {
+            int filterID = selectedProduct.id;
+            SortName(categoryIndex, filterID);    
         }
     }
     if (fork && categoryIndex > 0) {
+        if (!SortByName) {
             Sort(categoryIndex, sortByPrice, filterID);
         }
+        else {
+            SortName(categoryIndex, filterID);
+        }
+    }
 
     saveSelection(sup);
     Cleaning();
@@ -104,17 +119,21 @@ void displayAndSelectProduct(int categoryIndex, bool& fork) {
 void Creating() {
     system("cls");
     cout << "                               Добро пожаловать в выбор комплектующих" << endl;
-    cout << "                               Хотите еще сортировать по цене? (1-да, 2-нет): ";
+    cout << "                               Хотите сортировать по цене или по имени? (1-да по цене, 2-да по имени, 3-нет): ";
     int choiceSecondSort;
     getValidatedIntFromInput(choiceSecondSort);
     if (choiceSecondSort == 1) {
         int categoryIndex = 0;
-        bool sortByPrice = true;
+        sortByPrice = true;
         SortPrice(categoryIndex, sortByPrice);
     }
+    else if (choiceSecondSort == 2) {
+        SortByName = true;
+        int categoryIndex = 0;
+        int filterID = 0;
+        SortName(categoryIndex, filterID);
+    }
     system("cls");
-    cout << "Предлагаю начать выбор с процессоров" << endl << endl;
-    cout << endl;
     ifstream inFile(filename);
     if (!inFile) {
         cout << "Ошибка: не удалось открыть файл " << filename << endl;

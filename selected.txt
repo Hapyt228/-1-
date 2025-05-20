@@ -1,12 +1,10 @@
 hapyt
-Intel Core i9-12900K ó $589
-Nvidia GeForce RTX 5080 ó $999
-MSI MEG Z790 ACE ó $699
-Kingston Fury Renegade DDR5-6000 (2x16GB, CL32) ó $350
-EKWB EK-AIO 360 D-RGB (360 ÏÏ, AIO) ó $180
-Corsair MP600 1TB (M.2 NVMe, PCIe 4.0) ó $110
-be quiet! Straight Power 11 850W (80+ Platinum) ó $180
-Lian Li PC-O11 Dynamic ó $130
+AMD Ryzen 5 5600X ó $199
+Intel Arc A750 (8 √¡) ó $250
+MSI MAG B550 TOMAHAWK ó $179
+G.SKILL Ripjaws V DDR4-3200 (2x8GB, CL16) ó $80
+Cooler Master Hyper 212 Black Edition ó $45
+Crucial MX500 1TB (SATA SSD) ó $60
+Gigabyte P850GM 850W (80+ Gold) ó $110
+Cooler Master MasterBox Q300L ó $60
 ----------
-hapyt
-AMD Ryzen 9 9900X ó $499
